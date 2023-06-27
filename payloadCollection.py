@@ -198,4 +198,5 @@ class PayloadCollection:
             }
         )
         return payload
+    accessPointsWith2FactorAuthList = ['BS1']
 
