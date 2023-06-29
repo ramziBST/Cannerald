@@ -13,16 +13,15 @@ async def listen(url):
     while counter < 500000:
         try:
             async with connect(url) as websocket:
-                if url == PayloadCollection.urlGlutzServer:
 
-                    await websocket.send(json.dumps(PayloadCollection.message))
-                    print('Hoi We are Connected  to Glutz Server')
-                    counter = 1
-                    while True:
-                        msg = await websocket.recv()
-                        params = json.loads(msg)['params']
-                        observer = Observer()
-                        observer.observer(params=params)
+                await websocket.send(json.dumps(PayloadCollection.message))
+                print('Hoi We are Connected  to Glutz Server')
+                counter = 1
+                while True:
+                    msg = await websocket.recv()
+                    params = json.loads(msg)['params']
+                    observer = Observer()
+                    observer.observer(params=params)
 
 
 
@@ -52,7 +51,7 @@ async def listen(url):
 
 async def serversHandler():
     try:
-        task_Glutz = asyncio.create_task(listen( PayloadCollection.urlGlutzServer))
+        task_Glutz = asyncio.create_task(listen( PayloadCollection.wsServerCannerald))
         # task_ControllerServer = asyncio.create_task(listen(urlControllerServer))
         await asyncio.wait([task_Glutz])
         # await asyncio.wait([listen(uri) for uri in connections])

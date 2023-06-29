@@ -28,8 +28,8 @@ class Command:
 
             #return groupId
     def getAccessPointsPropertyData(self):
-        url = 'https://AdminBST:3018ZfE1974!3018@werk-fraubrunnen.onlinezuko.ch/rpc/'
-        response = requests.get(url= url, headers=self.headers,verify=False,
+        url = 'https://AdminBST:3018ZfE1974!3018@werk-fraubrunnen.onlinezuko.ch/rpc/:'
+        response = requests.get(url= url, headers=self.headers,verify=True,
                                     data=PayloadCollection.accessPointPropertyData )
 
 

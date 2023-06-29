@@ -2,9 +2,12 @@ import json
 
 
 class PayloadCollection:
+    username = 'AdminBST'
+    password = '3018ZfE1974!3018'
     headers = {'Content-Type': 'application/json'}
     rpcServerUrl =  "http://admin:3018Bern!@31.24.10.138:8332/rpc/"
     wsServerUrl = "ws://admin:3018Bern!@31.24.10.138:8332"
+    wsServerCannerald = 'ws://AdminBST:3018ZfE1974!3018@werk-fraubrunnen.onlinezuko.ch//ws?x-ws-token=24b49efff7d447a6aa2b2fa39c33a1fe688e9c642317000a'
     urlControllerServer = "ws://127.0.0.1:5050"
     glutzServerIp = "admin:admin@31.24.10.138"
     glutzServerPort = 8332
