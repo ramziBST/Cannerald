@@ -14,8 +14,9 @@ class PayloadCollection:
     controllerServerIp = "172.20.48.1"
     controllerServerPort = 5050
     connections = [wsServerUrl, urlControllerServer]
-    canneraldRpcServerUrl = "https://AdminBST:3018ZfE1974!3018@werk-fraubrunnen.onlinezuko.ch/rpc/"
-    lagerHausRpcServerUrl = "https://AdminBST:3018ZfE1974!3018@lagerhausweg-10.onlinezuko.ch/rpc/"
+    canneraldRpcServerUrl = f'https://{username}:{password}@werk-fraubrunnen.onlinezuko.ch/rpc/'
+    lagerHausRpcServerUrl = f'https://{username}:{password}@lagerhausweg-10.onlinezuko.ch/rpc/'
+    reiterstrRpcServerUrl = f'https://{username}:{password}@reiterstr-11.onlinezuko.ch/rpc/'
 
     message = {
         "method": "registerObserver",

@@ -3,7 +3,7 @@ from payloadCollection import PayloadCollection
 import json
 import base64
 
-url = 'https://werk-fraubrunnen.onlinezuko.ch/rpc/'
+url = 'https://lagerhausweg-10.onlinezuko.ch/rpc/'
 payload = {
   "method": "eAccess.getModel",
   "params": [
@@ -27,8 +27,8 @@ headers = {
 response = requests.post(url, headers=headers, data=json.dumps(payload,))
 if response.status_code == 200:
     # Request was successful
-    print('Request successful.')
-    print('Response:', response.text)
+    for results in response:
+        prin
 else:
     # Request failed
     print('Request failed with status code:', response.status_code)
